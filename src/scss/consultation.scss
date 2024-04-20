@@ -1,0 +1,91 @@
+.consultation {
+    margin-bottom: 5rem;
+
+    p {
+        text-align: center;
+        color: var(--dark);
+        font-size: 17px;
+    }
+
+    h2 {
+        text-align: center;
+        color: var(--black);
+        font-size: 30px;
+        margin-top: 1.2rem;
+        margin-bottom: 1rem;
+
+    }
+
+    .consultation-content {
+        h3 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: .5rem;
+            color: var(--dark);
+        }
+
+        p {
+            font-size: 17px;
+            color:var(--deep-gray);
+            text-align: start;
+            width: 80%;
+        }
+    }
+
+    button {
+        display: flex;
+        margin: auto;
+        margin-top: 3rem;
+        padding: 15px 25px;
+        background-color: var(--blue);
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        border: 1px solid rgb(230, 230, 230);
+
+
+        &:hover {
+            background-color: #366AC1;
+        }
+
+
+        
+    }
+}
+
+.consultation-items {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+
+    img {
+        width: 90%;
+    }
+}
+
+@media (min-width:500px){
+
+    .consultation-items {
+        img {
+            width: 70%;
+        }
+    }
+}
+
+@media (min-width:768px) {
+    .consultation {
+        h2 {
+            font-size: 40px;
+        }
+    }
+
+    .consultation-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .consultation-content {
+        p {
+            width: 100%;
+        }
+    }
+}

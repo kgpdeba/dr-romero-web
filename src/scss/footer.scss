@@ -1,0 +1,149 @@
+.footer {
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-span: 1;
+}
+
+.footer-content {
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+
+    h2 {
+        font-size: 40px;
+    }
+
+    p {
+        width: 80%;
+        font-size: 20px;
+        color: var(--dark);
+    }
+
+    .footer-icons {
+        gap: 1rem;
+
+        div {
+            border-radius: 50%;
+            background-color: #E6EBF2;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border: 1px solid #E6EBF2 ;
+
+            &:hover {
+                background-color: #fff;
+            }
+        }
+    }
+
+    form {
+        flex-direction: column;
+        gap: 1rem;
+
+
+        input {
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid rgb(230, 230, 230);
+            outline: none;
+            box-shadow: 4px 4px 0 0 rgba(57, 76, 87, 0.09);
+
+            &:focus {
+                border: 1px solid grey
+            }
+        }
+
+        .submit-btn {
+            padding: 10px;
+            cursor: pointer;
+            border: 1px solid rgb(230, 230, 230);
+            color: #fff;
+            border-radius: 10px;
+            width: 30%;
+            background-color: var(--blue) ;
+            box-shadow: 0 8px 34px 0 rgba(49, 111, 215, 0.3);
+
+            &:hover {
+                background-color: #366AC1;
+            }
+        }
+    }
+
+}
+
+.copyright {
+    background-color: #EAEEF5;
+    margin-top: 2rem;
+    font-size: 18px;
+    color: var(--dark);
+    padding: 2rem;
+    text-align: center;
+}
+
+.ul-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--dark);
+        font-size: 20px;
+
+        &:hover {
+            color: var(--blue);
+        }
+    }
+}
+
+
+.ph {
+    align-items: start;
+    gap: 1rem;
+    font-size: 20px;
+    cursor: pointer;
+
+    & p:hover {
+        color: var(--blue);
+    }
+
+}
+
+.ph-no {
+    width: 100%;
+    flex-direction: column;
+    font-weight: 700;
+    gap: 1rem
+}
+
+
+@media (min-width:768px) {
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width:1026px) {
+    .footer {
+        margin-top: 5rem;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer-content {
+        form {
+            .submit-btn.submit-btn {
+                width: 40%;
+            }
+
+        }
+    }
+}
