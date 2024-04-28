@@ -1,6 +1,6 @@
 const ul = document.getElementById("myLinks");
 
-const bar = document.querySelector('.hamburger')
+const bar = document.querySelector('.navbar-nav-collapse')
 
 bar.addEventListener('click', () => {
   console.log("clicked")
@@ -10,6 +10,3 @@ bar.addEventListener('click', () => {
     ul.style.display = "flex";
   }
 })
-
-
-

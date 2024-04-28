@@ -1,90 +1,81 @@
 .navbar {
-  margin-top: 40px;
+  display: flex;
+  margin-top: 20px;
   align-items: center;
   justify-content: space-between;
-}
 
-.nav-img {
-  width: 20px;
-  cursor: pointer;
-}
-
-.nav-list {
-  display: none;
-  flex-direction: column;
-  gap: 30px;
-  margin-left: auto;
-  left: 0;
-  top: 80px;
-  width: fit-content;
-  position: absolute;
-  opacity: 0.92;
-  background-color: rgb(230, 230, 230);
-  padding: 25px;
-  z-index: 2;
-  font-size: 17px;
-  text-wrap: nowrap;
-
-  a {
-    text-decoration: none;
-    color: var(--dark);
-    font-size: 21px;
-
-    &:hover {
-      color: var(--black);
-    }
-  }
-
-  li {
+  &-nav {
+    display: none;
+    flex-direction: column;
     list-style: none;
-    display: flex;
-    gap: 0.5rem;
+    gap: 28px;
+    margin-left: auto;
+    left: 0;
+    top: 80px;
     width: 100vw;
+    position: absolute;
+    opacity: 0.92;
+    background-color: rgb(230, 230, 230);
+    padding: 25px;
+    z-index: 2;
+    font-size: 17px;
+    text-wrap: nowrap;
 
-    span,
-    a {
-      color: var(--dark);
-      cursor: pointer;
+    &-item {
+      display: flex;
+      gap: 5px;
+    }
+
+    &-link {
       align-items: center;
-      font-weight: bolder;
+      text-decoration: none;
+      color: var(--dark);
       font-size: 18px;
-
-
+      padding: 5px;
 
       &:hover {
+        background-color: rgb(229, 247, 241);
+        transition:.2s ease-in-out;
         color: var(--black);
+      }
+    }
+
+    &-img {
+      width: 20px;
+      cursor: pointer;
+    }
+
+    &-collapse {
+      display: block;
+      cursor: pointer;
+      border: 0;
+      background-color: transparent;
+
+      &-img {
+        width: 1.6rem;
       }
     }
   }
 }
 
-.hamburger {
-  display: block;
-  cursor: pointer;
-  border: 0;
-  background-color: transparent;
+@media (min-width: 1024px) {
+  .navbar {
+    &-nav {
+      display: flex;
+      position: unset;
+      flex-direction: row;
+      justify-content: end;
+      align-items: center;
+      opacity: unset;
+      background-color: white;
 
-  img {
-    width: 1.6rem;
-  }
-}
+      &-item {
+        width: unset;
+      }
 
-@media (min-width: 992px) {
-  .hamburger {
-    display: none;
-  }
-
-  li {
-    width: unset !important;
-  }
-
-  .nav-list {
-    display: flex !important;
-    position: unset;
-    flex-direction: row;
-    justify-content: end;
-    align-items: center;
-    opacity: unset;
-  background-color: white;
+      &-collapse {
+        display: none;
+      }
+    }
   }
 }

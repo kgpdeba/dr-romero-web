@@ -5,44 +5,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
   <title>Dr Romero Webpack</title>
 </head>
 
 <body>
   <!-- navbar begins -->
   <div class="container">
-    <div class="navbar flex">
-      <a class="logo" href="./index.html">
+    <div class="navbar">
+      <a href="./index.html">
         <img src="./images/content/images/navbar/logo.svg" alt="logo" />
       </a>
-      <ul class="nav-list" id="myLinks">
-        <li>
-          <a href="#">About</a>
+      <ul class="navbar-nav" id="myLinks">
+        <li class="navbar-nav-item">
+          <a class="navbar-nav-link" href="#">About</a>
         </li>
-        <li>
-          <a href="#">Book Now</a>
+        <li class="navbar-nav-item">
+          <a class="navbar-nav-link" href="#">Book Now</a>
         </li>
-        <li>
-          <a href="#">Services</a>
+        <li class="navbar-nav-item">
+          <a class="navbar-nav-link" href="#">Services</a>
         </li>
-        <li>
-          <a href="#">Blog</a>
+        <li class="navbar-nav-item">
+          <a class="navbar-nav-link" href="#">Blog</a>
         </li>
-        <li>
-          <a href="#">Contact</a>
+        <li class="navbar-nav-item">
+          <a class="navbar-nav-link" href="#">Contact</a>
         </li>
-        <li>
-          <img src="./images/content/images/navbar/ph.svg" alt="phone" class="nav-img" />
-          <a href="tel:+449005628520" class="flex">+44 9005628520</a>
+        <li class="navbar-nav-item">
+          <img src="./images/content/images/navbar/ph.svg" alt="phone" class="navbar-nav-img" />
+          <a href="tel:+449005628520" class="navbar-nav-link ">+44 9005628520</a>
         </li>
-        <li>
-          <img src="./images/content/images/navbar/login.svg" alt="login" class="nav-img" />
-          <a href="#" class="flex">Login</a>
+        <li class="navbar-nav-item">
+          <img src="./images/content/images/navbar/login.svg" alt="login" class="navbar-nav-img" />
+          <a href="#" class="navbar-nav-link ">Login</a>
         </li>
       </ul>
-      <div class="nav-items">
-        <button class="hamburger">
-          <img src="./images/content/images/navbar/bars.svg" alt="bars">
+      <div class="navbar-nav-item">
+        <button class="navbar-nav-collapse">
+          <img src="./images/content/images/navbar/bars.svg" alt="bars" class="navbar-nav-collapse-img">
         </button>
       </div>
     </div>
@@ -50,289 +53,227 @@
   <!-- navbar ends -->
 
   <!-- banner begins -->
-  <section class="relative">
-    <div class="container">
-      <div class="flex media">
-        <img src="./images/content/images/hero/fb.svg" alt="fb">
-        <img src="./images/content/images/hero/linkedin.svg" alt="linkedin">
-        <img src="./images/content/images/hero/twitter.svg" alt="twitter">
-        <img src="./images/content/images/hero/youtube.svg" alt="youtube">
+  <section class="banner">
+    <div class="banner-content container">
+      <div class="banner-content-links">
+       <a href=""><img src="./images/content/images/hero/fb.svg" alt="fb"></a> 
+       <a href=""><img src="./images/content/images/hero/linkedin.svg" alt="linkedin"></a> 
+       <a href=""> <img src="./images/content/images/hero/twitter.svg" alt="twitter"></a>
+       <a href=""><img src="./images/content/images/hero/youtube.svg" alt="youtube"></a> 
       </div>
-      <div class="flex hero relative">
-        <div class="flex hero-content ">
-          <img src="./images/content/images/hero/doctor-bg.svg " alt="doctor" class="absolute doctor-bg">
-          <img src="./images/content/images/hero/hero-bg.svg " alt="hero" class="absolute hero-bg">
-          <p class="making-difference">Making difference in life of others</p>
-          <h1 class="">Meet Doctor Romero and her team</h1>
-          <p class="brilliant-doctors">With a team of brilliant doctors, she is out there to make an impact on patients'
-            life</p>
-          <div class="flex doctor-line ">
-            <span class=""></span>
-            <span></span>
-          </div>
+      <div class="banner-content-hero">
+        <div class="banner-content-hero-text ">
+          <p class="banner-content-hero-para">Making difference in life of others</p>
+          <h1 class="banner-content-hero-heading">Meet Doctor Romero and her team</h1>
+          <p class="banner-content-hero-sub-para">With a team of brilliant doctors, she is out there to make an impact
+            on patients' life</p>
         </div>
-        <img src="./images/content/images/hero/girl.png" alt="girl" class="girl">
+        <div class="banner-content-hero-img">
+          <img src="./images/content/images/hero/girl.png" alt="girl">
+        </div>
       </div>
     </div>
-    <div class="bg-banner flex">
-      <div class="flex">
-        <h2 class="active-patient ">5K</h2>
-        <p class="">Active Patients</p>
+    <div class="banner-data">
+      <div class="banner-data-details">
+        <p class="aqua banner-data-stats ">5K</p>
+        <p class="banner-data-para">Active Patients</p>
       </div>
-      <div class="flex">
-        <h2 class="succesful-sergeries">627</h2>
-        <p class="">Succesfull Surgeries</p>
+      <div class="banner-data-details">
+        <p class="bisque banner-data-stats">627</p>
+        <p class="banner-data-para">Succesfull Surgeries</p>
       </div>
-      <div class="flex">
-        <h2 class="brilliant-docs">37</h2>
-        <p class="">Brilliant docs in the team</p>
+      <div class="banner-data-details">
+        <p class="pink banner-data-stats">37</p>
+        <p class="brilliant banner-data-para">Brilliant docs in the team</p>
       </div>
     </div>
   </section>
-  <!-- navbar ends -->
+  <!-- banner ends -->
 
   <!-- services begins -->
-  <section class="services">
-    <p class="">Quick solutions</p>
-    <h2 class="">Extensive services</h2>
-    <div class="service-item">
-      <div class="flex">
+  <section class="service">
+    <p class="service-text">Quick solutions</p>
+    <h2 class="service-heading">Extensive services</h2>
+    <div class="service-content">
+      <div class=" service-content-item">
         <img src="./images/content/images/services/appoint.svg" alt="appointments">
-        <p class="">Book <br> Appointments</p>
+        <p class="service-content-item-para">Book <br> Appointments</p>
       </div>
-      <div class="flex">
+      <div class="service-content-item">
         <img src="./images/content/images/services/consult.svg" alt="consult">
-        <p class="">Consult<br> Online</p>
+        <p class="service-content-item-para">Consult<br> Online</p>
       </div>
-      <div class="flex">
+      <div class="service-content-item">
         <img src="./images/content/images/services/health.svg" alt="health">
-        <p class="">Health<br> Checkup</p>
+        <p class="service-content-item-para">Health<br> Checkup</p>
       </div>
-      <div class="flex">
+      <div class="service-content-item">
         <img src="./images/content/images/services/centre.svg" alt="centre">
-        <p class="">Find<br> Centers</p>
+        <p class="service-content-item-para">Find<br> Centers</p>
       </div>
-      <div class="flex">
+      <div class="service-content-item">
         <img src="./images/content/images/services/wellness.svg" alt="wellness">
-        <p class="">Health & <br>Wellness</p>
+        <p class="service-content-item-para">Health & <br>Wellness</p>
       </div>
-      <div class="flex">
+      <div class="service-content-item">
         <img src="./images/content/images/services/book.svg" alt="book">
-        <p class="w-75 text-center mt-2">Book Health<br> Record</p>
+        <p class="service-content-item-para">Book Health<br> Record</p>
       </div>
-      <div class="flex">
+      <div class="service-content-item">
         <img src="./images/content/images/services/test.svg" alt="test">
-        <p class="">Book Lab <br>Tests</p>
+        <p class="service-content-item-para">Book Lab <br>Tests</p>
       </div>
-      <div class="flex">
+      <div class="service-content-item">
         <img src="./images/content/images/services/book.svg" alt="book">
-        <p class="">Covid <br>Help</p>
+        <p class="service-content-item-para">Covid <br>Help</p>
       </div>
     </div>
   </section>
   <!-- services ends -->
 
-
   <!-- consultation begins -->
   <section class="container consultation">
-    <p class="">How to book Consultation</p>
-    <h2 class="">Step by step guide</h2>
+    <p class="consultation-text">How to book Consultation</p>
+    <h2 class="consultation-heading">Step by step guide</h2>
     <div class="consultation-items">
-      <div class="">
-        <img src="./images/content/images/consultation/lady.svg" alt="" class="w-100">
-      </div>
-      <div class="consultation-content">
-        <h3 class="">Provide us few simple answers</h3>
-        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
-          atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique
-          sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
-      </div>
-
-      <div class="consultation-content">
-        <h3 class="">Search, select Doctor</h3>
-        <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi
-          optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est,
-          omnis dolor repellendus. Temporibus autem quibusdam</p>
-      </div>
-      <div class="">
-        <img src="./images/content/images/consultation/lady.svg" alt="" class="w-25">
+      <div class="consultation-items-data">
+        <div class="consultation-items-img ">
+          <img src="./images/content/images/consultation/doc-bg.svg" alt="doctor" class="consultation-items-img-bg">
+          <img src="./images/content/images/consultation/doc.png" alt="doctor" class="consultation-items-img-info">
+          <p class="consultation-items-img-num strong">01</p>
+          <img src="./images/content/images/consultation/provide.svg" alt="arrow" class="consultation-items-img-arrow-one">
+        </div>
+        <div class="consultation-items-content">
+          <h3 class="consultation-items-heading">Provide us few simple answers</h3>
+          <p class="consultation-items-para">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+            praesentium voluptatum deleniti
+            atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique
+            sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+        </div>
       </div>
 
+      <div class="consultation-items-data reverse">
+        <div class="consultation-items-img lady-doctor">
+          <p class="consultation-items-img-digit strong">02</p>
+          <img src="./images/content/images/consultation/search.svg" alt="arrow" class="consultation-items-img-arrow-two">
+          <img src="./images/content/images/consultation/girl-bg.svg" alt="doctor" class="consultation-items-img-bg">
+          <img src="./images/content/images/consultation/girl.png" alt="doctor" class="consultation-items-img-data">
+        </div>
+        <div class="consultation-items-content">
+          <h3 class="consultation-items-heading">Search, select Doctor</h3>
+          <p class="consultation-items-para">Et harum quidem rerum facilis est et expedita distinctio. Nam libero
+            tempore, cum soluta nobis est eligendi
+            optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est,
+            omnis dolor repellendus. Temporibus autem quibusdam</p>
+        </div>
+      </div>
 
-      <div class="">
-        <img src="./images/content/images/consultation/lady.svg" alt="" class="w-100">
-      </div>
-      <div class="consultation-content">
-        <h3 class="">Pay securely</h3>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <div class="consultation-items-data">
+        <div class="consultation-items-img">
+          <img src="./images/content/images/consultation/doc-bg.svg" alt="doctor" class="consultation-items-img-bg">
+          <img src="./images/content/images/consultation/doc.png" alt="doctor" class="consultation-items-img-info">
+          <p class="consultation-items-img-num strong">03</p>
+          <img src="./images/content/images/consultation/pay.svg" alt="arrow" class="consultation-items-img-arrow-three">
+        </div>
+        <div class="consultation-items-content">
+          <h3 class="consultation-items-heading">Pay securely</h3>
+          <p class="consultation-items-para">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
       </div>
 
-      <div class="consultation-content">
-        <h3 class="">Start consultation, get Soltution</h3>
-        <p>Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem
-          rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
-          impedit quo minus.</p>
-      </div>
-      <div class="">
-        <img src="./images/content/images/consultation/lady.svg" alt="" class="w-100">
+      <div class="consultation-items-data reverse">
+        <div class="consultation-items-img lady-doctor">
+          <p class="consultation-items-img-digit strong">04</p>
+          <img src="./images/content/images/consultation/start.svg" alt="arrow" class="consultation-items-img-arrow-four">
+          <img src="./images/content/images/consultation/girl-bg.svg" alt="doctor" class="consultation-items-img-bg">
+          <img src="./images/content/images/consultation/girl.png" alt="doctor" class="consultation-items-img-data">
+        </div>
+        <div class="consultation-items-content">
+          <h3 class="consultation-items-heading mw-95">Start consultation, get Soltution</h3>
+          <p class="consultation-items-para">Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum
+            et dolorum fuga. Et harum quidem
+            rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque
+            nihil
+            impedit quo minus.</p>
+        </div>
       </div>
     </div>
-    <button>Book your consultation</button>
+    <button class="btn-common">Book your consultation</button>
   </section>
   <!-- consultation ends -->
 
-
   <!-- our team begins -->
   <section class="container our-team">
-    <p class="">Our team of</p>
-    <h2 class="">Best Doctors</h2>
-    <p class="flex similique">Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
+    <p class="our-team-text">Our team of</p>
+    <h2 class="our-team-heading">Best Doctors</h2>
+    <p class="our-team-para">Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
       fuga harum quidem rerum
       facilis est Et harum quidem rerum facilis est et expedita.</p>
 
-    <input type="text" placeholder="Search Doctor by name, category etc.." class="flex">
+    <input type="text" placeholder="Search Doctor by name, category etc.." class="our-team-input">
     <div class="our-team-content">
-      <ul>
-        <li><a href="#"> Neurologist</a></li>
-        <li><a href="#"> Cardiologists</a></li>
-        <li><a href="#"> Nefrologists</a></li>
-        <li><a href="#"> Gastroenterologist</a></li>
-        <li><a href="#"> Dermatologists</a></li>
-        <li><a href="#"> Gynecologist</a></li>
-        <li><a href="#"> ENT Specialist</a></li>
-        <li><a href="#"> Paediatrician</a></li>
-        <li><a href="#"> Pulmonologist</a></li>
-        <li><a href="#"> Endocrinologist</a></li>
-        <li><a href="#"> Oncologist</a></li>
+      <ul class="our-team-content-list">
+        <li class="our-team-content-item"><a class="our-team-content-link" href="#"> Neurologist</a></li>
+        <li class="our-team-content-item"><a class="our-team-content-link" href="#"> Cardiologists</a></li>
+        <li class="our-team-content-item"><a class="our-team-content-link" href="#"> Nefrologists</a></li>
+        <li class="our-team-content-item"><a class="our-team-content-link" href="#"> Gastroenterologist</a></li>
+        <li class="our-team-content-item"><a class="our-team-content-link" href="#"> Dermatologists</a></li>
+        <li class="our-team-content-item"><a class="our-team-content-link" href="#"> Gynecologist</a></li>
+        <li class="our-team-content-item"><a class="our-team-content-link" href="#"> ENT Specialist</a></li>
+        <li class="our-team-content-item"><a class="our-team-content-link" href="#"> Paediatrician</a></li>
+        <li class="our-team-content-item"><a class="our-team-content-link" href="#"> Pulmonologist</a></li>
+        <li class="our-team-content-item"><a class="our-team-content-link" href="#"> Endocrinologist</a></li>
+        <li class="our-team-content-item"><a class="our-team-content-link" href="#"> Oncologist</a></li>
       </ul>
 
-      <div class="team-images">
-        <img src="./images/content/images/team/sana.svg" alt="sana">
-        <img src="./images/content/images/team/andrew.svg" alt="andrew">
-        <img src="./images/content/images/team/kirti.svg" alt="kirti">
-        <img src="./images/content/images/team/abhi.svg" alt="abhi">
-        <img src="./images/content/images/team/brendon.svg" alt="brendon">
-        <img src="./images/content/images/team/lady.svg" alt="lady">
+      <div class="our-team-content-images">
+        <img src="./images/content/images/team/lady.png" alt="sana">
+        <img src="./images/content/images/team/andrew.png" alt="andrew">
+        <img src="./images/content/images/team/kirti.png" alt="kirti">
+        <img src="./images/content/images/team/andrew.png" alt="abhi">
+        <img src="./images/content/images/team/brendon.png" alt="brendon">
+        <img src="./images/content/images/team/lady.png" alt="lady">
       </div>
     </div>
-
-    <button>View all Doctors</button>
+    <button class="btn-common">View all Doctors</button>
   </section>
   <!-- our team ends -->
 
-
   <!-- choose begins -->
   <section class="choose">
-    <p class="">Best service guaranteed</p>
-    <h2 class="">Why choose Dr. Romero & team</h2>
-    <div class="choose-item">
-      <div class="flex">
-        <img src="./images/content/images/services/book.svg" alt="appointments">
-        <h3 class="">Top notch <br> professionals<h3>
-            <p>Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga harum</p>
+    <p class="choose-text">Best service guaranteed</p>
+    <h2 class="choose-heading">Why choose Dr. Romero & team</h2>
+    <div class="choose-content">
+      <div class="choose-content-item">
+        <img src="./images/content/images/choose/doctor.svg" alt="doctor">
+        <h3 class="choose-content-item-heading">Top notch <br> professionals</h3>
+        <p class="choose-content-item-para">Similique sunt in culpa qui officia deserunt mollitia animi, id est
+          laborum et dolorum fuga harum</p>
       </div>
-      <div class="flex">
-        <img src="./images/content/images/services/book.svg" alt="appointments">
-        <h3 class="">Digital cloud <br> stored data<h3>
-            <p>Et harum quidem rerum facilis est et expedita distinctiotempore soluta</p>
+      <div class="choose-content-item">
+        <img src="./images/content/images/choose/cloud.svg" alt="cloud">
+        <h3 class="choose-content-item-heading">Digital cloud <br> stored data</h3>
+        <p class="choose-content-item-para">Et harum quidem rerum facilis est et expedita distinctiotempore soluta</p>
       </div>
-      <div class="flex">
-        <img src="./images/content/images/services/book.svg" alt="appointments">
-        <h3 class="">24/7 online<br> service<h3>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+      <div class="choose-content-item">
+        <img src="./images/content/images/choose/doctor.svg" alt="doctor">
+        <h3 class="choose-content-item-heading">24/7 online<br> service</h3>
+        <p class="choose-content-item-para">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea</p>
       </div>
-      <div class="flex">
-        <img src="./images/content/images/services/book.svg" alt="appointments">
-        <h3 class="">Best healtcare <br> faclities<h3>
-            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus nulla quis</p>
+      <div class="choose-content-item">
+        <img src="./images/content/images/choose/cloud.svg" alt="cloud">
+        <h3 class="choose-content-item-heading">Best healtcare <br> faclities</h3>
+        <p class="choose-content-item-para">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
+          impedit quo minus nulla quis</p>
       </div>
     </div>
+    <button class=" btn-common btn-common--blue">Book Now</button>
   </section>
-
   <!-- choose ends -->
 
-
-  <!-- footer begins -->
-  <footer class="container">
-    <div class="footer">
-      <div class="flex footer-content">
-        <a class="logo" href="./index.html">
-          <img src="./images/content/images/navbar/logo.svg" alt="logo" />
-        </a>
-        <p class="">Sed ut perspiciatis unde omnis iste natus error sit voluptate
-          accusantium dolorem
-          laudant
-          ium Quis autem vel.</p>
-        <div class="flex footer-icons">
-          <div class=""><img src="./images/content/images/footer/fb.svg" alt="fb"></div>
-          <div class=""><img src="./images/content/images/footer/in.svg" alt="linkedin"></div>
-          <div class=""><img src="./images/content/images/footer/twitter.svg" alt="twitter"></div>
-          <div class=""><img src="./images/content/images/footer/youtube.svg" alt="youtube"></div>
-        </div>
-      </div>
-      <div class="flex footer-content links">
-        <h2 class="">Links</h2>
-        <ul class="ul-links">
-          <li class="">
-            <a href="#" class="">Home</a>
-          </li>
-          <li class="">
-            <a href="#" class="">About</a>
-          </li>
-          <li class="">
-            <a href="#" class="">Book Now</a>
-          </li>
-          <li class="">
-            <a href="#" class="">Services</a>
-          </li>
-          <li class="">
-            <a href="#" class="">Blog</a>
-          </li>
-          <li class="">
-            <a href="#" class="">Register</a>
-          </li>
-          <li class="">
-            <a href="#" class="">Contact</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="flex footer-content">
-        <h2 class="">Contact</h2>
-        <div class="flex ph">
-          <img src="./images/content/images/navbar/ph.svg" alt="ph" class="mt-1">
-          <div class="ph-no flex ">
-            <p class="">+44 9005628520</p>
-            <p class="">+44 8075565897</p>
-          </div>
-        </div>
-        <div class="flex ph">
-          <img src="./images/content/images/footer/mail.svg" alt="mail">
-          <p class="email">d.romero@gmail.com</p>
-        </div>
-        <div class="flex ph">
-          <img src="./images/content/images/footer/adrs.svg" alt="address">
-          <p class="">Brendon Street, CA,
-            Lane - 56, USA</p>
-        </div>
-      </div>
-
-      <div class="flex footer-content">
-        <h2 class="">Let's Connect</h2>
-        <form action="" class="flex">
-          <input type="text" placeholder="Full Name" class="">
-          <input type="text" placeholder="Email" class="">
-          <input type="text" placeholder="Your Message" class="">
-          <button type="button" class="submit-btn">Submit</button>
-        </form>
-      </div>
-    </div>
-  </footer>
-  <div class="">
-    <p class="copyright">&#169; 2021 Design Studio All Rights Reserved</p>
-  </div>
-  <!-- footer ends -->
 </body>
 
 </html>

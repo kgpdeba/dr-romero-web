@@ -1,29 +1,30 @@
 .our-team {
     margin-bottom: 5rem;
 
-    p {
+    &-text {
         text-align: center;
-        color: var(--dark);
+        color: var(--gray);
         font-size: 17px;
     }
 
-    h2 {
+    &-heading {
         text-align: center;
         color: var(--black);
         font-size: 30px;
         margin-top: 1.2rem;
         margin-bottom: 1rem;
-
     }
 
-    .similique {
+    &-para {
         margin: auto;
         font-size: 16px;
         color: var(--deep-gray);
         margin-bottom: 2rem;
+        line-height: 20px;
     }
 
-    input {
+    &-input {
+        display: flex;
         width: 100%;
         padding: 15px;
         font-size: 16px;
@@ -38,102 +39,115 @@
         }
     }
 
-    button {
-        display: flex;
-        margin: auto;
-        margin-top: 3rem;
-        padding: 15px 25px;
-        background-color: var(--blue);
-        color: white;
-        border-radius: 10px;
-        cursor: pointer;
-        border: 1px solid rgb(230, 230, 230);
-        box-shadow: 0 8px 34px 0 rgba(49, 111, 215, 0.3);
-
-
-        &:hover {
-            background-color: #366AC1;
-        }
-    }
-
-}
-
-.our-team-content {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(1, 1fr );
-    margin-top: 2rem;
-    gap:2rem;
-
-    li {
-        list-style: none;
-        display: flex;
+    &-content {
+        display: grid;
+        justify-content: space-between;
+        align-items: start;
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 4rem;
         gap: 2rem;
 
-        a {
-          line-height: 30px;
-          text-decoration: none;
-          color: var(--dark);
-          cursor: pointer;
-          align-items: center;
-          font-weight: 400;
-          font-size: 20px;
-        //   margin: auto;
-    
-          &:hover {
-            color: var(--blue);
-          }
+        &-list {
+            margin: auto;
+            margin-top: 0;
         }
-      }
 
-      .team-images {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 1rem;
-
-        img {
-            border-radius: 10%;
-            
+        &-item {
+            list-style: none;
+            display: flex;
         }
-      }
+
+        &-link {
+            line-height: 34px;
+            text-decoration: none;
+            color: var(--dark);
+            cursor: pointer;
+            font-weight: 400;
+            font-size: 24px;
+
+            &:hover {
+                color: var(--blue);
+            }
+        }
+
+        &-images {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1.5rem;
+            margin: auto;
+
+            img {
+                border-radius: 10%;
+                cursor: pointer;
+            }
+        }
+    }
 }
 
 @media (min-width:768px) {
     .our-team {
-        h2 {
+        &-heading {
             font-size: 40px;
         }
 
-        .similique {
+        &-para {
             width: 60%;
         }
 
-        input {
+        &-input {
             width: 50%;
         }
-    }
 
-
-    .our-team-content {
-        grid-template-columns: repeat(2, 1fr );
-
-        a {
-          line-height: 40px;
-        }
-
-        .team-images {
+        &-content {
             grid-template-columns: repeat(2, 1fr);
-    
-          }
-    }
 
+            &-link {
+                line-height: 40px;
+            }
+
+            &-images {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
 }
 
 @media (min-width:1024px) {
-    .our-team-content {
-        .team-images {
-            grid-template-columns: repeat(3, 1fr);
-    
-          }
+    .our-team {
+        &-content {
+            &-link {
+                line-height: 44px;
+            }
+
+            &-images {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+                margin-top: 2px;
+            }
+        }
+    }
+}
+
+@media (min-width:1440px) {
+    .our-team {
+        margin-bottom: 10rem;
+        background-image: url('../images/content/images/team/team-bg.svg');
+        background-size: 80%;
+        width: 65%;
+        text-align: center;
+        background-position: top -60px right -40px;
+        background-repeat: no-repeat;
+
+        &-input {
+            width: 40%;
+        }
+
+        &-content {
+            padding: 0 2rem;
+
+            &-list {
+                margin: unset;
+            }
+        }
     }
 }

@@ -4,12 +4,9 @@
 @import 'container.scss';
 @import 'banner.scss';
 @import 'service.scss';
-@import 'footer.scss';
 @import 'consultation.scss';
 @import 'team.scss';
 @import 'choose.scss';
-
-
 
 * {
   margin: 0;
@@ -17,22 +14,22 @@
   box-sizing: border-box;
 }
 
-.container {
-  width: 80%;
-}
-
 body {
   font-family: "Sofia", serif;
+  font-weight: 400;
 }
 
-.flex {
-  display: flex;
+
+.semi-bold
+{
+  font-weight: 500;
 }
 
-.relative {
-  position: relative;
+.bold {
+  font-weight: 600;
 }
 
-.absolute {
-  position: absolute;
+.strong {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
 }

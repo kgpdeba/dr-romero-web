@@ -26,7 +26,7 @@ const htmlPluginEntries = templateFiles.map(
       hash: false,
       filename: template.output,
       template: path.resolve(environment.paths.source, template.input),
-      favicon: path.resolve(environment.paths.source, 'images', 'favicon.ico'),
+      // favicon: path.resolve(environment.paths.source, 'images', 'favicon.ico'),
     })
 );
 
@@ -40,9 +40,18 @@ module.exports = {
   },
   module: {
     rules: [
+      
       {
         test: /\.((c|sa|sc)ss)$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', {
+          loader: 'sass-loader',
+          options: {
+            sourceMap: true,
+            sassOptions: {
+              outputStyle: 'expanded',
+            },
+          },
+        }],
       },
       {
         test: /\.js$/,
@@ -124,14 +133,7 @@ module.exports = {
             ignore: ['*.DS_Store', 'Thumbs.db'],
           },
         },
-        {
-          from: path.resolve(environment.paths.source, 'videos'),
-          to: path.resolve(environment.paths.output, 'videos'),
-          toType: 'dir',
-          globOptions: {
-            ignore: ['*.DS_Store', 'Thumbs.db'],
-          },
-        },
+        
       ],
     }),
   ].concat(htmlPluginEntries),
